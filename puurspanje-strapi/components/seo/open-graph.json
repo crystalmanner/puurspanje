@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_seo_open_graphs",
+  "info": {
+    "name": "Open Graph",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.og-image"
+    },
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.og-image"
+    }
+  }
+}

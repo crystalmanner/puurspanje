@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "towns",
+  "info": {
+    "name": "Regions / Town",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "model": "property-location"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "media": {
+      "via": "town",
+      "collection": "media-file"
+    }
+  }
+}

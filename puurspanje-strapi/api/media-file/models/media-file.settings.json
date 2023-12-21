@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_files",
+  "info": {
+    "name": "MediaFile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "property": {
+      "model": "property",
+      "via": "media"
+    },
+    "category": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "town": {
+      "model": "town",
+      "via": "media"
+    }
+  }
+}

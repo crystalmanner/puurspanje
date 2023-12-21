@@ -1,0 +1,53 @@
+@use '@styles/variables/colors';
+@use '@styles/mixins' as *;
+@use '@styles/functions/columns';
+
+.section {
+  padding: 120px 0;
+
+  h2 {
+    @include heading-2;
+    @include col(6);
+
+    @include breakpoint(max-sm) {
+      @include heading-3;
+    }
+  }
+
+  @include breakpoint(max-sm) {
+    padding: 100px 0;
+  }
+}
+
+.grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 60px 20px;
+
+  @include breakpoint(max-md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
+}
+
+.grid > div {
+  h3 {
+    @include heading-3;
+
+    @include breakpoint(max-sm) {
+      @include heading-5-bold;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    @include text-md;
+    color: colors.$dark-gray;
+
+    @include breakpoint(max-sm) {
+      @include text;
+    }
+  }
+}

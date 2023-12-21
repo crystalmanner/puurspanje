@@ -1,0 +1,49 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.topBanner {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: colors.$light-gray;
+  color: colors.$dark-gray;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint("max-md") {
+      display: none;
+    }
+  }
+
+  li {
+    @include text-sm-bold;
+    margin-left: 2rem;
+  }
+}
+
+.reviews {
+  display: flex;
+  @include text-sm;
+
+  span {
+    margin-left: 0.5rem;
+  }
+}
+
+.call {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: colors.$black;
+    margin-right: 0.5rem;
+  }
+}

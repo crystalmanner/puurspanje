@@ -1,0 +1,23 @@
+@use "@styles/functions/columns";
+@use "@styles/mixins/breakpoint" as bp;
+
+@mixin col($lg: 12, $md: 12, $sm: 12, $columns: 12, $base: 12) {
+  @if $base != $columns {
+    max-width: columns.col($base, $columns);
+  }
+  @if $sm != $columns {
+    @include bp.breakpoint(sm) {
+      max-width: columns.col($sm, $columns);
+    }
+  }
+  @if $md != $columns {
+    @include bp.breakpoint(md) {
+      max-width: columns.col($md, $columns);
+    }
+  }
+  @if $lg != $columns {
+    @include bp.breakpoint(lg) {
+      max-width: columns.col($lg, $columns);
+    }
+  }
+}

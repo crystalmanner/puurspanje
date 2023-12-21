@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_types",
+  "info": {
+    "name": "Properties / Property Type",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

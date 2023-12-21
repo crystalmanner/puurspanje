@@ -1,0 +1,23 @@
+@use "@styles/variables/colors";
+@use "@styles/variables/shadows";
+
+.card {
+  height: 300px;
+  width: auto;
+  background-color: rgb(203, 209, 218);
+  opacity: 0.7;
+  cursor: default;
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+  animation: animation 1s linear 0s infinite alternate none running;
+}
+
+@keyframes animation {
+  0% {
+    background: rgb(227, 230, 233);
+  }
+  100% {
+    background: rgb(203, 209, 218);
+  }
+}

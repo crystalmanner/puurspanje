@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_categories",
+  "info": {
+    "name": "Activities / Activity category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

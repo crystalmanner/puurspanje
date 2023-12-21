@@ -1,0 +1,46 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.property {
+  display: flex;
+}
+
+.content {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    @include heading-5;
+  }
+}
+
+.address {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  @include text-sm;
+  color: colors.$dark-gray;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.rooms {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  @include text-sm;
+  color: colors.$dark-gray;
+
+  svg {
+    margin: 0 5px;
+  }
+}
+
+.price {
+  margin-top: 12px;
+  @include text;
+  color: colors.$black;
+}

@@ -1,0 +1,39 @@
+@use "@styles/layout/container";
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.carousel {
+  h2 {
+    @include heading-2;
+    margin-bottom: 3rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-top: 1rem;
+    @include heading-5;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    svg {
+      flex-shrink: 0;
+      margin: 0 20px;
+    }
+  }
+
+  span {
+    margin-top: 10px;
+    @include text;
+    color: colors.$dark-gray;
+  }
+}

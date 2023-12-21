@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "name": "seo",
+    "icon": "search-dollar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "noindex": {
+      "type": "boolean"
+    },
+    "nofollow": {
+      "type": "boolean"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "Facebook": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.facebook"
+    },
+    "openGraph": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.open-graph"
+    },
+    "defaultImageHeight": {
+      "type": "integer"
+    },
+    "defaultImageWidth": {
+      "type": "integer"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "site_name": {
+      "type": "string"
+    }
+  }
+}

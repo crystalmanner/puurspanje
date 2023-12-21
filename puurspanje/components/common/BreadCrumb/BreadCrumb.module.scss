@@ -1,0 +1,21 @@
+@use "@styles/variables/colors";
+
+.breadCrumb {
+  display: inline-block;
+  color: colors.$gray;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 1em;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}

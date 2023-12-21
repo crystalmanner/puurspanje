@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18" width="12" height="18">
+	<title>arrow-down-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ec7f07 } 
+	</style>
+	<path id="Layer" class="shp0" d="M5.58 17.03C5.87 17.32 6.35 17.32 6.64 17.03L11.41 12.26C11.71 11.96 11.71 11.49 11.41 11.2C11.12 10.9 10.65 10.9 10.35 11.2L6.11 15.44L1.87 11.2C1.58 10.9 1.1 10.9 0.81 11.2C0.52 11.49 0.52 11.96 0.81 12.26L5.58 17.03ZM5.36 0.5L5.36 16.5L6.86 16.5L6.86 0.5L5.36 0.5Z" />
+</svg>

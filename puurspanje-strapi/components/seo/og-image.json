@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_seo_og_images",
+  "info": {
+    "name": "ogMedia",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "alt": {
+      "type": "string"
+    }
+  }
+}

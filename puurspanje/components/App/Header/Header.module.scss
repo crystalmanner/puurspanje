@@ -1,0 +1,63 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.headerWrapper {
+  height: 60px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  ul,
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    margin-left: 4rem;
+
+    @include breakpoint("max-md") {
+      display: none;
+    }
+  }
+
+  li {
+    @include text;
+    color: colors.$black;
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  button {
+    margin-left: auto;
+
+    @include breakpoint("max-md") {
+      display: none;
+    }
+  }
+
+  a img {
+    margin-left: 0.5rem;
+  }
+}
+
+.tag {
+  margin-left: 0.5rem;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+  margin-bottom: -0.2rem;
+}

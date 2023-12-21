@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "Properties / Property",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "plotSize": {
+      "type": "decimal"
+    },
+    "livingArea": {
+      "type": "decimal"
+    },
+    "terrace": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "aspects": {
+      "collection": "unique-aspects"
+    },
+    "type": {
+      "model": "property-type"
+    },
+    "town": {
+      "model": "town"
+    },
+    "activities": {
+      "collection": "activity"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "media": {
+      "collection": "media-file",
+      "via": "property"
+    },
+    "location": {
+      "type": "json"
+    }
+  }
+}

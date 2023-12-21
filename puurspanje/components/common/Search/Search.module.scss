@@ -1,0 +1,72 @@
+@use "@styles/variables/colors";
+@use "@styles/variables/shadows";
+@use "@styles/mixins" as *;
+
+.search {
+  background-color: colors.$white;
+  box-shadow: shadows.$s7;
+  height: 88px;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+
+  //   button {
+  //     width: 100%;
+  //     margin: 1rem 2rem 2rem;
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+
+  //   button img {
+  //     margin-left: 1rem;
+  //   }
+
+  //   @include breakpoint(lg) {
+  //     flex-wrap: nowrap;
+
+  //     button {
+  //       margin-bottom: 1rem;
+  //     }
+  //   }
+  // }
+
+  // .inputWrapper {
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   padding: 1.5rem 2rem 1rem;
+  //   width: 100%;
+
+  //   label {
+  //     @include text-bold;
+  //   }
+
+  //   input {
+  //     padding: 0.5rem 1rem;
+  //     margin: 0.625rem -1rem 0 -1rem;
+  //     @include text-md;
+  //   }
+
+  //   span {
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     right: 0;
+  //     transform: scale(0);
+  //     transform-origin: center;
+  //     border: 2px solid colors.$black;
+
+  //     transition: transform 0.2s ease-in-out;
+  //   }
+
+  //   input.filled + span,
+  //   &:hover input + span,
+  //   input:focus + span {
+  //     transform: scale(1);
+  //   }
+
+  //   @include breakpoint(lg) {
+  //     max-width: 25%;
+  //   }
+}

@@ -1,0 +1,32 @@
+@use "@styles/mixins" as *;
+
+.aspects {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include breakpoint("lg") {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 100px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    @include heading-5;
+
+    @include breakpoint("max-sm") {
+      @include text-sm;
+    }
+
+    svg {
+      margin-right: 1.5rem;
+
+      @include breakpoint("max-sm") {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

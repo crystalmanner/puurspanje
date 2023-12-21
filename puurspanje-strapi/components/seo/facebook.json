@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_seo_facebooks",
+  "info": {
+    "name": "Facebook",
+    "icon": "user-circle"
+  },
+  "options": {},
+  "attributes": {
+    "appId": {
+      "type": "string"
+    }
+  }
+}

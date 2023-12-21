@@ -1,0 +1,174 @@
+@use "@styles/layout/container";
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.imageWrapper {
+  position: relative;
+  margin-top: -80px;
+  width: 100%;
+  height: 55vmin;
+  z-index: -1;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.content + .content {
+  margin-top: 4rem;
+}
+
+.head {
+  margin-top: 3rem;
+  @include col(6, $sm: 8);
+  h2 {
+    @include heading-2;
+  }
+  span {
+    display: block;
+    margin-top: 2rem;
+    color: colors.$gray;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+.textContent {
+  @include col(6, $sm: 8);
+
+  h3 {
+    @include heading-4;
+    margin-bottom: 2rem;
+  }
+
+  strong {
+    color: colors.$black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: colors.$gray;
+    @include text-md;
+  }
+
+  p + p {
+    margin-top: 1.5rem;
+  }
+}
+
+.mediaContent {
+  @include col(8, $sm: 10);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.mediaContent[data-items="2"] {
+  grid-template-columns: 1fr 1fr;
+}
+
+.bannerContent {
+  @include col(8, $sm: 10);
+  background-color: colors.$light-blue;
+  padding: 1.75rem 3rem 3rem;
+
+  h3 {
+    @include heading-4;
+  }
+
+  p {
+    color: colors.$gray;
+    @include text-md;
+  }
+
+  div {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    padding: 1rem 3.25rem;
+  }
+}
+
+.author {
+  @include col(6, $sm: 8);
+  span {
+    color: colors.$gray;
+  }
+
+  a {
+    color: colors.$blue;
+  }
+}
+
+.relatedArticles {
+  hr {
+    margin: 6rem 0 4rem;
+  }
+}
+
+.relatedArticlesSlider {
+  margin-top: 2rem;
+}
+
+.postCard,
+.searchCTA {
+  min-height: 400px;
+}
+
+.postCard {
+  display: block;
+}
+
+.postCardBody {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  > div {
+    max-width: 75%;
+  }
+  img {
+    margin: 1.125rem 1rem;
+  }
+  h3 {
+    @include heading-4;
+  }
+  p {
+    margin-top: 1.25rem;
+    color: colors.$gray;
+  }
+}
+
+.searchCTA {
+  background-color: colors.$light-blue;
+  height: 100%;
+  padding: 3rem 2rem 3.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    @include heading-4;
+  }
+
+  p:first-of-type {
+    margin-top: 2rem;
+    @include text-bold;
+  }
+
+  p:last-of-type {
+    margin-top: 1.5rem;
+  }
+
+  button {
+    justify-content: center;
+    padding: 0.5rem 0;
+    line-height: 2;
+  }
+}

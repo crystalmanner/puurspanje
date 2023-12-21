@@ -1,0 +1,125 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.top {
+  margin-top: 8rem;
+  margin-bottom: 3.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact {
+  padding: 1.25rem 2rem 1.25rem 1.25rem;
+  border: 1px solid colors.$light-blue;
+
+  @include breakpoint(max-md) {
+    margin-bottom: 1rem;
+  }
+  @include breakpoint(max-sm) {
+    width: 100%;
+  }
+}
+
+.contactBottom {
+  display: flex;
+  margin-top: 10px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 100vh;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    line-height: 1.5;
+  }
+
+  a:first-of-type {
+    @include text-bold;
+  }
+
+  a:last-of-type {
+    margin-top: 0.25rem;
+  }
+}
+
+.subscribe {
+  // width: 100%;
+  @include col(8);
+  background-color: colors.$light-blue;
+  padding: 1.25rem;
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include breakpoint(max-md) {
+    display: block;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    @include heading-5-bold;
+  }
+
+  p {
+    margin-top: 1rem;
+    width: 275px;
+    color: colors.$dark-gray;
+    line-height: 1.5;
+    margin-right: 50px;
+    @include breakpoint(max-sm) {
+      width: 100%;
+    }
+  }
+
+  form {
+    display: flex;
+    @include breakpoint(max-md) {
+      margin-top: 1.25rem;
+    }
+    @include breakpoint(max-sm) {
+      margin-top: 1rem;
+      display: block;
+    }
+  }
+
+  input {
+    width: 235px;
+    height: 48px;
+    padding-left: 15px;
+
+    @include breakpoint(max-sm) {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin-left: 10px;
+    height: 48px;
+    justify-content: center;
+    @include breakpoint(max-sm) {
+      margin-left: 0px;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 3.75rem;
+}

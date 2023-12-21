@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_content_texts",
+  "info": {
+    "name": "contentText",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

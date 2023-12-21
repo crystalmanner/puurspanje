@@ -1,0 +1,68 @@
+@use '@styles/variables/colors';
+@use '@styles/mixins' as *;
+@use '@styles/functions/columns';
+
+.section {
+  background-color: colors.$black;
+  padding: 100px 0 200px;
+
+  h2 {
+    @include heading-2;
+    @include col(7);
+    color: colors.$white;
+
+    @include breakpoint(max-sm) {
+      @include heading-3;
+    }
+  }
+}
+
+.grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+
+  @include breakpoint(max-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(max-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid > div {
+  display: flex;
+
+  img {
+    margin-right: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  h3 {
+    @include heading-3;
+    color: colors.$white;
+
+    @include breakpoint(max-sm) {
+      @include heading-4;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    @include text-md;
+    color: colors.$dark-gray;
+  }
+
+  @include breakpoint(max-sm) {
+    padding-right: 20px;
+  }
+}
+
+.bottomText {
+  margin-top: 60px;
+  @include text-md;
+  color: colors.$dark-gray;
+}

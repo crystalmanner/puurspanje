@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_banners",
+  "info": {
+    "name": "banner",
+    "icon": "check-circle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

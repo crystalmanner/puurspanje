@@ -1,0 +1,105 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.select {
+  position: relative;
+
+  input {
+    position: fixed;
+    left: -100vw;
+    top: -1000vh;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    appearance: none;
+    outline: none;
+    line-height: 0;
+  }
+}
+
+.button {
+  background-color: colors.$white;
+  border: 1px solid colors.$gray;
+  text-align: left;
+
+  @include text;
+
+  > span {
+    min-width: 30px;
+    margin-right: 20px;
+    color: colors.$dark-gray;
+  }
+}
+
+.empty {
+  .button {
+    color: colors.$dark-gray;
+  }
+}
+
+.button::after {
+  position: absolute;
+  right: 10px;
+  content: "";
+  background-image: url("/assets/select/chevron.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 6px;
+}
+
+.open .button::after {
+  transform: rotate(180deg);
+}
+
+.menu {
+  max-height: 200px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  display: none;
+
+  background-color: colors.$white;
+  border: 1px solid colors.$gray;
+  overflow-y: auto;
+  // box-shadow: none;
+}
+
+.button,
+.option {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+
+  @include text;
+}
+
+.current,
+.option:hover {
+  background-color: colors.$gray;
+}
+
+.selected,
+.selected:hover {
+  background-color: colors.$orange;
+  color: colors.$white;
+}
+
+.hiddenSelect {
+  position: fixed;
+  left: -100vw;
+  top: -1000vh;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+  outline: none;
+  line-height: 0;
+}

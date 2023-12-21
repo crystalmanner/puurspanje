@@ -1,0 +1,22 @@
+@use "@styles/variables/colors";
+@use "@styles/variables/shadows";
+@use "@styles/mixins" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBody {
+  padding: 1rem 2rem;
+  background-color: colors.$light-blue;
+
+  h3 {
+    @include heading-4;
+  }
+
+  p {
+    @include text-md;
+    color: colors.$gray;
+  }
+}

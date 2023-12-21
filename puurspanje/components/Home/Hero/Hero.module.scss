@@ -1,0 +1,60 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.hero {
+  position: relative;
+  padding: 11rem 0;
+
+  img {
+    z-index: -1;
+  }
+
+  h1 {
+    @include heading-large;
+    color: colors.$white;
+    @include col(8);
+
+    @include breakpoint("max-sm") {
+      @include heading-1;
+    }
+  }
+
+  @include breakpoint("max-sm") {
+    padding: 9.75rem 0 2rem;
+  }
+}
+
+.heroBottom {
+  background-color: colors.$light-blue;
+  padding: 3rem 0 4rem 0;
+
+  @include breakpoint("max-sm") {
+    padding: 0 0 2.5rem;
+  }
+
+  a {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    @include text-bold;
+
+    @include breakpoint("max-sm") {
+      margin-top: 2.5rem;
+    }
+
+    svg {
+      margin-left: 1rem;
+      width: 16px;
+    }
+  }
+}
+
+.searchWrapper {
+  margin-top: -6.5rem;
+  @include col(10);
+
+  @include breakpoint("max-sm") {
+    margin: 0 -20px 0;
+  }
+}

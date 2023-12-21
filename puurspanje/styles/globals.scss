@@ -1,0 +1,110 @@
+@use "./variables/colors";
+@use "@styles/mixins/breakpoint" as bp;
+@import "@styles/layout/container";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: colors.$black;
+
+  @include bp.breakpoint(max-sm) {
+    overflow-x: hidden;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  display: block;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: inherit;
+  font: inherit;
+}
+
+input {
+  background: colors.$white;
+  color: inherit;
+  border: none;
+  margin: 0;
+  font-size: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+}
+
+hr {
+  border: 1px solid colors.$light-gray;
+}
+
+.appear,
+.enter {
+  opacity: 0;
+  z-index: 3;
+}
+.appear-active,
+.enter.enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 300ms;
+}
+
+.exit {
+  opacity: 1;
+  position: absolute;
+  display: none;
+  z-index: 0;
+}
+
+.exit.exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}

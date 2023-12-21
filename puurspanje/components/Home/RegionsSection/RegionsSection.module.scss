@@ -1,0 +1,93 @@
+@use "@styles/mixins" as *;
+@use "@styles/variables/colors";
+
+.title {
+  margin-top: 120px;
+  @include heading-2;
+
+  @include breakpoint("max-sm") {
+    margin-top: 100px;
+    @include heading-3;
+  }
+}
+
+.provinces {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @include breakpoint("max-sm") {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-top: 60%;
+  cursor: pointer;
+
+  @include breakpoint("max-sm") {
+    display: none;
+  }
+}
+
+.province {
+  & > h3 {
+    cursor: pointer;
+    margin-bottom: 20px;
+    @include heading-4;
+  }
+}
+
+.regions {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @include breakpoint("lg") {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.region {
+  display: flex;
+}
+
+.regionImage {
+  flex-shrink: 0;
+}
+
+.info {
+  margin-left: 20px;
+
+  h3 {
+    @include heading-5;
+  }
+
+  p {
+    margin-top: 10px;
+    @include text-sm;
+    color: colors.$dark-gray;
+  }
+}
+
+.linkMore {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  @include text-bold;
+  color: colors.$orange;
+
+  svg {
+    margin-left: 16px;
+  }
+}

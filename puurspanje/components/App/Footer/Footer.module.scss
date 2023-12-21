@@ -1,0 +1,117 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+@use "./Subscribe.module.scss";
+
+.footer {
+  padding: 60px 0;
+  background-color: colors.$black;
+
+  hr {
+    margin: 60px 0;
+    border-color: rgba(#fff, 0.1);
+  }
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+
+  > a {
+    flex-shrink: 0;
+  }
+
+  @include breakpoint(max-sm) {
+    .socialIcons {
+      display: none;
+    }
+  }
+}
+
+.socialIcons {
+  flex-shrink: 0;
+  display: flex;
+
+  li + li {
+    margin-left: 32px;
+  }
+}
+
+.bottomSocialIcons {
+  margin-top: 1rem;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+
+  @include breakpoint(max-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint(max-sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.listItem {
+  h3 {
+    @include heading-6;
+    color: colors.$white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      display: none;
+    }
+
+    @include breakpoint(max-sm) {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 300ms ease-out;
+  }
+
+  li + li {
+    margin-top: 1rem;
+  }
+
+  li a {
+    color: colors.$dark-gray;
+    @include text-sm;
+  }
+}
+
+.listItem.active {
+  ul {
+    max-height: 1000px;
+    transition: max-height 100ms 300ms ease-out;
+  }
+}
+
+.bottom {
+  a {
+    @include text-sm-bold;
+    color: colors.$dark-gray;
+  }
+}

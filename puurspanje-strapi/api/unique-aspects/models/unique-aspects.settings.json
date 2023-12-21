@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unique_aspects",
+  "info": {
+    "name": "Properties / Unique Aspect",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

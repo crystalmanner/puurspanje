@@ -1,0 +1,46 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.property {
+  display: flex;
+}
+
+.image {
+  width: 260px;
+  height: 160px;
+  background-color: colors.$gray;
+}
+
+.content {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: block;
+    background-color: colors.$gray;
+  }
+
+  span:first-child {
+    width: 50ch;
+    height: 1.5rem;
+  }
+
+  span:nth-child(2) {
+    margin-top: 10px;
+    width: 45ch;
+    height: 1.3125rem;
+  }
+
+  span:nth-child(3) {
+    margin-top: 10px;
+    width: 30ch;
+    height: 1.3125rem;
+  }
+
+  span:nth-child(4) {
+    margin-top: 12px;
+    width: 20ch;
+    height: 1.5rem;
+  }
+}

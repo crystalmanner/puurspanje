@@ -1,0 +1,65 @@
+@use "@styles/variables/colors";
+@use "@styles/mixins" as *;
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 40px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    margin: 20px 0;
+  }
+}
+
+.reset {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    @include text;
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include text-bold;
+    color: colors.$dark-gray;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
+
+.searchButton {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.group {
+  & > h3 {
+    margin-bottom: 10px;
+    @include heading-5;
+  }
+
+  .select {
+    margin-top: 10px;
+  }
+}
+
+.count {
+  @include text;
+  color: colors.$black;
+}
